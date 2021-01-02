@@ -1,0 +1,35 @@
+{
+  "name": "knex",
+  "version": "1.0.0",
+  "description": "Query Builder Knex",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gease-RS/Node-Knex.git"
+  },
+  "keywords": [
+    "node",
+    "knex",
+    "postgresql",
+    "query",
+    "builder"
+  ],
+  "author": "Gease Oliveira da  Rosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gease-RS/Node-Knex/issues"
+  },
+  "homepage": "https://github.com/Gease-RS/Node-Knex#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "global": "^4.4.0",
+    "knex": "^0.21.15",
+    "pg": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
