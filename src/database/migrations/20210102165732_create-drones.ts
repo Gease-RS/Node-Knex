@@ -1,7 +1,7 @@
 import Knex from 'knex'
 
 export async function up (knex: Knex) {
-  return knex.schema.createTable('drone', table => {
+  return knex.schema.createTable('drones', table => {
       table.increments('id').primary()
       table.string('modelo').notNullable
       table.string('fabricante').notNullable
@@ -38,5 +38,5 @@ export async function up (knex: Knex) {
 }
 
 export async function down (knex: Knex) {
-  return knex.schema.dropTableIfExists("drone")
+  return knex.schema.dropTableIfExists("drones")
 }
