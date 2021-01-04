@@ -1,8 +1,10 @@
 import express from 'express'
 const routes = express.Router()
 
-routes.get('/', (req, res) => {
-        return res.json('Hello World!')
-})
+import DronesController from './controllers/DronesController'
+
+const dronesController = new DronesController()
+
+routes.get('/drones', dronesController.index)
 
 export default routes
