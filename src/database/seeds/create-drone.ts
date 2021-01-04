@@ -1,9 +1,9 @@
 import Knex from 'knex'
 
 export async function seed (knex: Knex) {
-  await knex('drone').insert([
+  await knex('drones').insert([
       {
-        id: 1,
+        id: 3,
         modelo: "Mavic 2 PRO", 
         fabricante: "Dji",
         peso: "931",

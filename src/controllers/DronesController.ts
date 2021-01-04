@@ -85,10 +85,16 @@ class DronesController {
 
         await trx.commit()
 
-        return response.json(`Drone criado com Sucesso`)
-    }
+        return response.status(201).json(data)
+		}
+		
+		async remove (request: Request, response: Response ) {
+			const { id } = request.body
 
+			const drone = await knex('drones').where("id", id).delete()
 
+			return response.json('Drone deletado com suceesso!')
+		}
 }
 
 export default DronesController
