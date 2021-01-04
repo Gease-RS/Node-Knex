@@ -1,9 +1,9 @@
+import Knex from 'knex'
 
-exports.up = function(knex) {
-  return knex.schema
-    .createTable('drone', (table) => {
+export async function up (knex: Knex) {
+  return knex.schema.createTable('drone', table => {
       table.increments('id').primary()
-      table.string('modelo').notNu
+      table.string('modelo').notNullable
       table.string('fabricante').notNullable
       table.string('peso').notNullable
       table.string('dimensao').notNullable
@@ -15,8 +15,7 @@ exports.up = function(knex) {
       table.string('duracaovooest').notNullable
       table.string('duracaomediavoo').notNullable
       table.string('distanciamax').notNullable
-      table.string('frequenciaa').notNullable
-      table.string('armazenagem')
+      table.string('frequencia').notNullable
       table.string('btcapacidade').notNullable
       table.string('btvolts').notNullable
       table.string('btipo').notNullable
@@ -30,15 +29,14 @@ exports.up = function(knex) {
       table.string('camodosfoto').notNullable
       table.string('camodosvideo').notNullable
       table.string('camtxbites').notNullable
-      table.string('camformatosft').notNullable
-      table.string('camformatosvd').notNullable
+      table.string('formatofoto').notNullable
+      table.string('formatovideo').notNullable
       table.float('price')
       table.timestamp('created_at')
       table.timestamp('updated_at')
   })
 }
 
-exports.down = function(knex) {
-  return knex.schema
-    .dropTable("drone")
+export async function down (knex: Knex) {
+  return knex.schema.dropTableIfExists("drone")
 }

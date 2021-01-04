@@ -1,8 +1,6 @@
-  
-const knex = require("knex");
-
-const knexfile = require("../../knexfile");
-
+import knex from 'knex'
+const knexfile = require('../../knexfile')
 const environment = process.env.DB_ENV || "development";
+const connection = knex(knexfile[environment])
 
-module.exports = knex(knexfile[environment]);
+export default connection

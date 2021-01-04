@@ -1,4 +1,6 @@
-const knex = require('knex')({
+import knex from 'knex'
+
+const connection = knex({
     client: 'pg',
     version: '7.2',
     connection: {
@@ -9,4 +11,4 @@ const knex = require('knex')({
     }
   })
 
-  module.exports = knex
+  export default  connection
