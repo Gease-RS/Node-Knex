@@ -2,7 +2,7 @@
   "name": "knex",
   "version": "1.0.0",
   "description": "Query Builder Knex",
-  "main": "index.js",
+  "main": "server.ts",
   "scripts": {
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
     "knex:migrate": "knex --knexfile knexfile.ts migrate:latest",
@@ -12,13 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/Gease-RS/Node-Knex.git"
   },
-  "keywords": [
-    "node",
-    "knex",
-    "postgresql",
-    "query",
-    "builder"
-  ],
+  "keywords": [ "node", "knex", "postgresql", "query", "builder" ],
   "author": "Gease Oliveira da  Rosa",
   "license": "ISC",
   "bugs": {
