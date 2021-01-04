@@ -93,6 +93,10 @@ class DronesController {
 
 			const drone = await knex('drones').where("id", id).delete()
 
+			if(drone === 0 ) {
+				return response.json("Esse Drone já foi deeletado")
+			}
+
 			return response.json('Drone deletado com suceesso!')
 		}
 }
