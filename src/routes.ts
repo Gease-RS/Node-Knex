@@ -7,6 +7,7 @@ const dronesController = new DronesController()
 
 routes.get('/drones', dronesController.index)
 routes.post('/drones', dronesController.create)
-routes.delete('/drones',  dronesController.remove)
+routes.delete('/drones/:id',  dronesController.remove)
+routes.put('/drones/:id', dronesController.update)
 
 export default routes
